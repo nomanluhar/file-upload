@@ -1,0 +1,29 @@
+<form action="/upload" method="POST" autocomplete="off" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Media:</label>
+        <input type="file" class="form-control" id="exampleFormControlInput1" name="media_file">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Media</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each user_media}}
+                <tr>
+                    <td>
+                        <a href="http://localhost:8000/audio/{{this.userMedia}}" target="_blank">{{this.userMedia}}</a>
+                    </td>
+                    {{!-- <td>{{this.userMedia}}</td> --}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
