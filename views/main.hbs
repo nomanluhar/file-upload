@@ -18,7 +18,8 @@
                 {{#each user_media}}
                 <tr>
                     <td>
-                        <a href="http://localhost:8000/audio/{{this.userMedia}}" target="_blank">{{this.userMedia}}</a>
+                        {{!-- <a href="http://localhost:8000/audio/{{this.userMedia}}" target="_blank">{{this.userMedia}}</a> --}}
+                        <a href="http://localhost:8000/fileinfo/{{this.userMedia}}" target="_blank">{{this.userMedia}}</a>
                     </td>
                     {{!-- <td>{{this.userMedia}}</td> --}}
                 </tr>
